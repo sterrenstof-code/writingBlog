@@ -1,0 +1,16 @@
+<!-- About html -->
+
+<h1>Index page</h1>
+
+<a href="/comments">Comments page</a>
+<a href="/comments/new">Add a comment</a>
+
+<ul>
+    {% for comment in home.content.comments %}
+    <li>{{ comment.username }} says: {{ comment.comment }}</li>
+    <a href="/comments/{{comment.id}}">Read more</a>
+{% endfor %}
+</ul>
+<a href="/comments/new">Click to add new comment</a>
+
+
