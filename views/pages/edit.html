@@ -1,0 +1,26 @@
+<h1>Edit produuct</h1>
+
+<form action="/about/{{product._id}}" method="POST">
+  <div>
+    <label for="name">Title</label>
+    <input type="text" id="name" name="name" value="{{product.name}}" required>
+  </div>
+
+  <div>
+    <label for="category">Category</label>
+    <select name="category">
+      <option value="fruit">Fruit</option>
+      <option value="dairy">Dairy</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" required>
+  </div>
+
+  <button type="submit">Login</button>
+
+</form>
+
+<a href="/about">Products Page</a>

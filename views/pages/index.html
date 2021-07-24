@@ -15,43 +15,6 @@
 		
 		{% include "pages/header.html" %}
 
-	{% for chapter in content %}
-	<div class="blog-item" id="#home">
-		<div class="blog-item__left">
-			<img src="{{chapter.img}}" alt="">
-			<h1>Comment section</h1>
-			{% for comment in chapter.comments %}
-				<p>{{comment.comment}}</p>
-				<p>Writen by{{comment.username}}</p>
-			{% endfor %}
-
-			<h1>Write a new comment</h1>
-			
-			<form action="/comments" method="post" id="{{chapter.id}}">
-				<section>
-					<input type="hidden" name="formID" value="{{chapter.id}}">
-					<label for="username"></label>
-					<input type="text" id="username" placeholder="username" name="username" />
-				</section>
-				<section>
-					<label for="comment">Comment Text</label>
-					<br>
-					<textarea id="comment" cols="30" rows="5" name="comment"></textarea>
-				</section>
-				<button >Submit</button>
-			</form>
-		</div>
-		<div class="blog-item__right">
-			<h1>{{chapter.title}}</h1>
-			<p>{{chapter.content}}</p>
-
-		</div>
-	</div>
-
-
-
-	{% endfor %}
-
 {% include "pages/footer.html" %} 
 
 	</body>

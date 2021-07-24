@@ -14,17 +14,10 @@
 		
     {% include "pages/header.html" %}
 
+    <h1>Products: {{product.name}}</h1>
+		<h1>Price: {{product.price}} euro</h1>
 
-    <h1>Products PAGE</h1>
-		<ul>
-			{% for product in products %}
-			<li>{{product.name}}</li>
-			<a href="/about/{{product.id}}">See more about product</a>
-	{% endfor %}
-		</ul>
-		
-		<a href="/about/new">Make new product</a>
-	
+		<a href="/about">Products Page</a>
 
 	</body>
 </html>
